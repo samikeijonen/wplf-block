@@ -3,7 +3,7 @@
  */
 const { __ } = wp.i18n;
 const { Component } = wp.element;
-const { Disabled, PanelBody, ServerSideRender } = wp.components;
+const { PanelBody, Placeholder, ServerSideRender } = wp.components;
 const { InspectorControls } = wp.blockEditor;
 
 /**
@@ -19,7 +19,13 @@ class WPLFBlockEdit extends Component {
 		// Setup the attributes.
 		const {
 			attributes,
-        } = this.props;	
+        } = this.props;
+
+        const emptyResponsePlaceholder = () => (
+			<Placeholder>
+				<PostSelector postType="wplf-form" { ...this.props } />
+			</Placeholder>
+		);
 
 		return (
 			<>
@@ -29,12 +35,11 @@ class WPLFBlockEdit extends Component {
 					</PanelBody>
 				</InspectorControls>
 
-                <Disabled>
-                    <ServerSideRender
-                        block={ name }
-                        attributes={ attributes }
-                    />
-                </Disabled>
+                <ServerSideRender
+                    block={ name }
+                    attributes={ attributes }
+                    EmptyResponsePlaceholder={ emptyResponsePlaceholder }
+                />
 			</>
 		);
 	}

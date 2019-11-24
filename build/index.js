@@ -408,8 +408,8 @@ var _block_json__WEBPACK_IMPORTED_MODULE_8___namespace = /*#__PURE__*/__webpack_
 var __ = wp.i18n.__;
 var Component = wp.element.Component;
 var _wp$components = wp.components,
-    Disabled = _wp$components.Disabled,
     PanelBody = _wp$components.PanelBody,
+    Placeholder = _wp$components.Placeholder,
     ServerSideRender = _wp$components.ServerSideRender;
 var InspectorControls = wp.blockEditor.InspectorControls;
 /**
@@ -434,16 +434,26 @@ function (_Component) {
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default()(WPLFBlockEdit, [{
     key: "render",
     value: function render() {
+      var _this = this;
+
       // Setup the attributes.
       var attributes = this.props.attributes;
+
+      var emptyResponsePlaceholder = function emptyResponsePlaceholder() {
+        return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(Placeholder, null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_components_postSelector__WEBPACK_IMPORTED_MODULE_7__["default"], _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({
+          postType: "wplf-form"
+        }, _this.props)));
+      };
+
       return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["Fragment"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(InspectorControls, null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(PanelBody, {
         title: __('Form Settings', 'wplf-block')
       }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_components_postSelector__WEBPACK_IMPORTED_MODULE_7__["default"], _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({
         postType: "wplf-form"
-      }, this.props)))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(Disabled, null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(ServerSideRender, {
+      }, this.props)))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(ServerSideRender, {
         block: name,
-        attributes: attributes
-      })));
+        attributes: attributes,
+        EmptyResponsePlaceholder: emptyResponsePlaceholder
+      }));
     }
   }]);
 

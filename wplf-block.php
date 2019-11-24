@@ -133,12 +133,13 @@ final class Plugin {
 			$this->uri . 'build/index.js',
 			[
 				'wp-blocks',
+				'wp-components',
 				'wp-core-data',
 				'wp-data',
-				'wp-i18n',
 				'wp-editor',
 				'wp-element',
-				'wp-components',
+				'wp-i18n',
+				'wp-server-side-render',
 			],
 			'1.0.0',
 			true
