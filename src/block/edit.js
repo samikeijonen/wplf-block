@@ -2,7 +2,6 @@
  * WordPress dependencies
  */
 const { __ } = wp.i18n;
-const { Component } = wp.element;
 const { PanelBody, Placeholder, ServerSideRender } = wp.components;
 const { InspectorControls } = wp.blockEditor;
 
@@ -14,35 +13,31 @@ import metadata from './block.json';
 
 const { name } = metadata;
 
-class WPLFBlockEdit extends Component {
-	render() {
-		// Setup the attributes.
-		const {
-			attributes,
-		} = this.props;
+const WPLFBlockEdit = ( props ) => {
+	// Setup the attributes.
+	const { attributes } = props;
 
-		const emptyResponsePlaceholder = () => (
-			<Placeholder>
-				<PostSelector postType="wplf-form" { ...this.props } />
-			</Placeholder>
-		);
+	const emptyResponsePlaceholder = () => (
+		<Placeholder>
+			<PostSelector postType="wplf-form" { ...props } />
+		</Placeholder>
+	);
 
-		return (
-			<>
-				<InspectorControls>
-					<PanelBody title={ __( 'Form Settings', 'wplf-block' ) }>
-						<PostSelector postType="wplf-form" { ...this.props } />
-					</PanelBody>
-				</InspectorControls>
+	return (
+		<>
+			<InspectorControls>
+				<PanelBody title={ __( 'Form Settings', 'wplf-block' ) }>
+					<PostSelector postType="wplf-form" { ...props } />
+				</PanelBody>
+			</InspectorControls>
 
-				<ServerSideRender
-					block={ name }
-					attributes={ attributes }
-					EmptyResponsePlaceholder={ emptyResponsePlaceholder }
-				/>
-			</>
-		);
-	}
-}
+			<ServerSideRender
+				block={ name }
+				attributes={ attributes }
+				EmptyResponsePlaceholder={ emptyResponsePlaceholder }
+			/>
+		</>
+	);
+};
 
 export default WPLFBlockEdit;
