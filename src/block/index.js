@@ -3,44 +3,15 @@
  */
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
-const { Component } = wp.element;
-const { PanelBody, ServerSideRender } = wp.components;
-const { InspectorControls } = wp.blockEditor;
 
 /**
  * Internal dependencies
  */
-//import edit from './edit';
+import edit from './edit';
 import icon from './icon';
 import metadata from './block.json';
-import PostSelector from './components/dropdown';
 
 const { name, category, attributes } = metadata;
-
-class WPLFBlock extends Component {
-
-	render() {
-		// Setup the attributes.
-		const {
-			attributes,
-		} = this.props;
-
-		return (
-			<>
-				<InspectorControls>
-					<PanelBody title={ __( 'Form Settings' ) }>
-						<PostSelector postType="wplf-form" { ...this.props } />
-					</PanelBody>
-				</InspectorControls>
-
-				<ServerSideRender
-					block={ name }
-					attributes={ attributes }
-				/>
-			</>
-		);
-	}
-}
 
 registerBlockType( name, {
 	title: __( 'WP Libre Form', 'wplf-block' ),
@@ -52,7 +23,7 @@ registerBlockType( name, {
 	},
 	attributes,
 	category,
-	edit: WPLFBlock,
+	edit: edit,
 	save: () => {
 		return null;
 	},
