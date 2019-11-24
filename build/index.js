@@ -408,6 +408,7 @@ var _block_json__WEBPACK_IMPORTED_MODULE_8___namespace = /*#__PURE__*/__webpack_
 var __ = wp.i18n.__;
 var Component = wp.element.Component;
 var _wp$components = wp.components,
+    Disabled = _wp$components.Disabled,
     PanelBody = _wp$components.PanelBody,
     ServerSideRender = _wp$components.ServerSideRender;
 var InspectorControls = wp.blockEditor.InspectorControls;
@@ -439,10 +440,10 @@ function (_Component) {
         title: __('Form Settings', 'wplf-block')
       }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_components_postSelector__WEBPACK_IMPORTED_MODULE_7__["default"], _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({
         postType: "wplf-form"
-      }, this.props)))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(ServerSideRender, {
+      }, this.props)))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(Disabled, null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(ServerSideRender, {
         block: name,
         attributes: attributes
-      }));
+      })));
     }
   }]);
 

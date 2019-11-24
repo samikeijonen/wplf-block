@@ -3,7 +3,7 @@
  */
 const { __ } = wp.i18n;
 const { Component } = wp.element;
-const { PanelBody, ServerSideRender } = wp.components;
+const { Disabled, PanelBody, ServerSideRender } = wp.components;
 const { InspectorControls } = wp.blockEditor;
 
 /**
@@ -29,10 +29,12 @@ class WPLFBlockEdit extends Component {
 					</PanelBody>
 				</InspectorControls>
 
-				<ServerSideRender
-				    block={ name }
-				    attributes={ attributes }
-			    />
+                <Disabled>
+                    <ServerSideRender
+                        block={ name }
+                        attributes={ attributes }
+                    />
+                </Disabled>
 			</>
 		);
 	}
