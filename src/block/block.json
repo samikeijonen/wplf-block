@@ -1,0 +1,12 @@
+{
+	"name": "wp-libre-form/form-block",
+	"category": "layout",
+	"attributes": {
+		"align": {
+			"type": "string"
+		},
+		"postId": { 
+			"type": "string"
+		}
+	}
+}
