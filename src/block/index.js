@@ -3,7 +3,6 @@
  */
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
-const { apiFetch } = wp.apiFetch;
 const { Component } = wp.element;
 const { PanelBody, ServerSideRender } = wp.components;
 const { InspectorControls } = wp.blockEditor;
@@ -24,14 +23,7 @@ class WPLFBlock extends Component {
 		// Setup the attributes.
 		const {
 			attributes,
-			setAttributes
 		} = this.props;
-
-		const blockContent = 
-			<ServerSideRender
-				block={ name }
-				attributes={ attributes }
-			/>;
 
 		return (
 			<>
@@ -41,7 +33,10 @@ class WPLFBlock extends Component {
 					</PanelBody>
 				</InspectorControls>
 
-				{ blockContent }
+				<ServerSideRender
+					block={ name }
+					attributes={ attributes }
+				/>
 			</>
 		);
 	}

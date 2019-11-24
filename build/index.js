@@ -435,7 +435,6 @@ var _block_json__WEBPACK_IMPORTED_MODULE_8___namespace = /*#__PURE__*/__webpack_
  */
 var __ = wp.i18n.__;
 var registerBlockType = wp.blocks.registerBlockType;
-var apiFetch = wp.apiFetch.apiFetch;
 var Component = wp.element.Component;
 var _wp$components = wp.components,
     PanelBody = _wp$components.PanelBody,
@@ -468,18 +467,15 @@ function (_Component) {
     key: "render",
     value: function render() {
       // Setup the attributes.
-      var _this$props = this.props,
-          attributes = _this$props.attributes,
-          setAttributes = _this$props.setAttributes;
-      var blockContent = Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(ServerSideRender, {
-        block: name,
-        attributes: attributes
-      });
+      var attributes = this.props.attributes;
       return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["Fragment"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(InspectorControls, null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(PanelBody, {
         title: __('Form Settings')
       }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_components_dropdown__WEBPACK_IMPORTED_MODULE_9__["default"], _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({
         postType: "wplf-form"
-      }, this.props)))), blockContent);
+      }, this.props)))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(ServerSideRender, {
+        block: name,
+        attributes: attributes
+      }));
     }
   }]);
 
