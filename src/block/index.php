@@ -41,7 +41,7 @@ function render_block( $attributes ) {
 	$form_id = $attributes['postId'];
 
 	if ( 0 === $form_id || empty( $form_id ) ) {
-		return '<p>' . esc_html__( 'Select form from the sidebar settings.' ) . '</p>';
+		return;
 	}
 
 	return wplf()->wplf_form( intval( $form_id ) );

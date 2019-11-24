@@ -301,7 +301,7 @@ module.exports = _typeof;
 /*! exports provided: name, category, attributes, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"name\":\"wp-libre-form/form-block\",\"category\":\"layout\",\"attributes\":{\"align\":{\"type\":\"string\"},\"postId\":{\"type\":\"string\"}}}");
+module.exports = JSON.parse("{\"name\":\"wp-libre-form/form-block\",\"category\":\"widgets\",\"attributes\":{\"align\":{\"type\":\"string\"},\"postId\":{\"type\":\"string\"}}}");
 
 /***/ }),
 
@@ -471,15 +471,46 @@ __webpack_require__.r(__webpack_exports__);
  */
 var _wp$components = wp.components,
     Path = _wp$components.Path,
+    Rect = _wp$components.Rect,
     SVG = _wp$components.SVG;
 /* harmony default export */ __webpack_exports__["default"] = (Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(SVG, {
-  xmlns: "http://www.w3.org/2000/svg",
-  viewBox: "0 0 24 24"
+  viewBox: "0 0 24 24",
+  xmlns: "http://www.w3.org/2000/svg"
 }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(Path, {
-  d: "M4 4h7V2H4c-1.1 0-2 .9-2 2v7h2V4zm6 9l-4 5h12l-3-4-2.03 2.71L10 13zm7-4.5c0-.83-.67-1.5-1.5-1.5S14 7.67 14 8.5s.67 1.5 1.5 1.5S17 9.33 17 8.5zM20 2h-7v2h7v7h2V4c0-1.1-.9-2-2-2zm0 18h-7v2h7c1.1 0 2-.9 2-2v-7h-2v7zM4 13H2v7c0 1.1.9 2 2 2h7v-2H4v-7z"
-}), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(Path, {
-  d: "M0 0h24v24H0z",
+  d: "M0,0h24v24H0V0z",
   fill: "none"
+}), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(Rect, {
+  x: "11",
+  y: "7",
+  width: "6",
+  height: "2"
+}), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(Rect, {
+  x: "11",
+  y: "11",
+  width: "6",
+  height: "2"
+}), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(Rect, {
+  x: "11",
+  y: "15",
+  width: "6",
+  height: "2"
+}), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(Rect, {
+  x: "7",
+  y: "7",
+  width: "2",
+  height: "2"
+}), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(Rect, {
+  x: "7",
+  y: "11",
+  width: "2",
+  height: "2"
+}), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(Rect, {
+  x: "7",
+  y: "15",
+  width: "2",
+  height: "2"
+}), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(Path, {
+  d: "M20.1,3H3.9C3.4,3,3,3.4,3,3.9v16.2C3,20.5,3.4,21,3.9,21h16.2c0.4,0,0.9-0.5,0.9-0.9V3.9C21,3.4,20.5,3,20.1,3z M19,19H5V5h14V19z"
 })));
 
 /***/ }),
