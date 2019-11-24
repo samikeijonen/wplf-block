@@ -23,7 +23,7 @@ registerBlockType( name, {
 	},
 	attributes,
 	category,
-	edit: edit,
+	edit,
 	save: () => {
 		return null;
 	},

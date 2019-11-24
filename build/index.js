@@ -324,13 +324,13 @@ __webpack_require__.r(__webpack_exports__);
 var __ = wp.i18n.__;
 var withSelect = wp.data.withSelect;
 var SelectControl = wp.components.SelectControl;
-var PostSelector = withSelect(function (select, props) {
-  var postType = props.postType;
-  return {
-    posts: select('core').getEntityRecords('postType', postType),
-    props: props
-  };
-})(function (props) {
+/**
+ * Post picker for post type.
+ *
+ * @param {Object} props Props for component.
+ */
+
+var PostSelector = function PostSelector(props) {
   var attributes = props.attributes,
       setAttributes = props.setAttributes;
   var options = [];
@@ -363,8 +363,15 @@ var PostSelector = withSelect(function (select, props) {
     },
     value: attributes.postId
   });
-});
-/* harmony default export */ __webpack_exports__["default"] = (PostSelector);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (withSelect(function (select, props) {
+  var postType = props.postType;
+  return {
+    posts: select('core').getEntityRecords('postType', postType),
+    props: props
+  };
+})(PostSelector));
 
 /***/ }),
 

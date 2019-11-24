@@ -19,9 +19,9 @@ class WPLFBlockEdit extends Component {
 		// Setup the attributes.
 		const {
 			attributes,
-        } = this.props;
+		} = this.props;
 
-        const emptyResponsePlaceholder = () => (
+		const emptyResponsePlaceholder = () => (
 			<Placeholder>
 				<PostSelector postType="wplf-form" { ...this.props } />
 			</Placeholder>
@@ -35,11 +35,11 @@ class WPLFBlockEdit extends Component {
 					</PanelBody>
 				</InspectorControls>
 
-                <ServerSideRender
-                    block={ name }
-                    attributes={ attributes }
-                    EmptyResponsePlaceholder={ emptyResponsePlaceholder }
-                />
+				<ServerSideRender
+					block={ name }
+					attributes={ attributes }
+					EmptyResponsePlaceholder={ emptyResponsePlaceholder }
+				/>
 			</>
 		);
 	}
