@@ -2,8 +2,9 @@
  * WordPress dependencies
  */
 const { __ } = wp.i18n;
-const { PanelBody, Placeholder, ServerSideRender } = wp.components;
+const { PanelBody, Placeholder } = wp.components;
 const { InspectorControls } = wp.blockEditor;
+const { serverSideRender: ServerSideRender } = wp;
 
 /**
  * Internal dependencies
