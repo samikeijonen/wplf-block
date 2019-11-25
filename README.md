@@ -1,2 +1,5 @@
-# wplf-block
-WP Libre Form Block
+# WP Libre Form Block
+
+WP Libre Form Block Plugin enables you to pick wanted form using dropdown. That's far better UX than using shortcode.
+
+WP Libre Form block can be found under `Widgets` category. Also searching `/form` works.
