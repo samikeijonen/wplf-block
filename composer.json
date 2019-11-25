@@ -1,0 +1,15 @@
+{
+    "name": "samikeijonen/wplf-block",
+    "description": "WP Libre Form Block",
+    "type": "wordpress-plugin",
+    "license": "MIT",
+    "keywords": ["form", "block", "WordPress"],
+    "homepage": "https://github.com/samikeijonen/wplf-block",
+    "authors": [
+        {
+            "name": "Sami Keijonen",
+            "email": "sami.keijonen@foxnet.fi"
+        }
+    ],
+    "require": {}
+}
